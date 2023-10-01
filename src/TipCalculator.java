@@ -8,12 +8,11 @@ public class TipCalculator {
         int people = scan.nextInt();
         System.out.print("What's the tip in percentage? (0-100): ");
         int tipPercentage = scan.nextInt();
-        int numOfItems = 0;
 
         double price = 0;
         double totalPrice = 0;
-        int x = 0;
-        int y = 0;
+        int totalItems = 0;
+        int itemNumber = 0;
         String[] foods = new String[100];
 
         // Ask for prices and items
@@ -25,9 +24,8 @@ public class TipCalculator {
             if (price != -1) {
                 System.out.print("Enter the item: ");
                 String item = scan.nextLine();
-                foods[x] = item;
-                x++;
-                numOfItems = x;
+                foods[totalItems] = item;
+                totalItems++;
             }
         }
 
@@ -46,9 +44,9 @@ public class TipCalculator {
         System.out.println("Items ordered: ");
 
         // Print items in list
-        for(int i = 0; i < numOfItems; i++) {
-            System.out.println(foods[y]);
-            y++;
+        for(int i = 0; i < totalItems; i++) {
+            System.out.println(foods[itemNumber]);
+            itemNumber++;
         }
 
     }
