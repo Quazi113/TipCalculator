@@ -4,9 +4,9 @@ public class TipCalculator {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Welcome to the tip calculator!");
-        System.out.println("How many people are in your group: ");
+        System.out.print("How many people are in your group: ");
         int people = scan.nextInt();
-        System.out.println("What's the tip in percentage? (0-100): ");
+        System.out.print("What's the tip in percentage? (0-100): ");
         int tipPercentage = scan.nextInt();
 
         double price = 0;
@@ -14,7 +14,7 @@ public class TipCalculator {
 
         while (price != -1.0) {
             totalPrice += price;
-            System.out.println("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
+            System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             price = scan.nextDouble();
         }
 
