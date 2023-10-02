@@ -27,6 +27,7 @@ public class TipCalculator {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             price = scan.nextDouble();
             scan.nextLine();
+            // Freestyle
             if (billWithMeal.equals("y")) {
                 if (price != -1) {
                     System.out.print("Enter the item: ");
@@ -48,11 +49,13 @@ public class TipCalculator {
         System.out.println("Per person cost before tip: $" + String.format("%.2f", (totalPrice / people)));
         System.out.println("Tip per person: $" + String.format("%.2f", (totalTip / people)));
         System.out.println("Total cost per person: $" + String.format("%.2f", (totalBill / people)));
+        if (billWithMeal.equals("y")) {
+            System.out.println("-----------------------------");
+            System.out.println("Items ordered: ");
+        }
 
         // Print items in order from the list
         for(int i = 0; i < totalItems; i++) {
-            System.out.println("-----------------------------");
-            System.out.println("Items ordered: ");
             System.out.println(foods[itemNumber]);
             itemNumber++;
         }
